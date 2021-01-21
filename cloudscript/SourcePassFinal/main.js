@@ -9,22 +9,22 @@ CloudScript.Commands.InsertData = args => {
     let val = args.Value;
 
     database
-    .child(key)
-    .set(val)
-    .then( response.send({result: "success"}) );
+        .child(key)
+        .set(val)
+        .then( response.send({result: "success"}) );
 }
-
+ 
 
 CloudScript.Commands.GetData = args => {
 
     let key = args.Key;
 
     database
-    .child(key)
-    .once('value')
-    .then(snap => {
-        response.send({result: snap.val() });
-    })
+        .child(key)
+        .once('value')
+        .then(snap => {
+            response.send({result: snap.val() });
+        })
 }
 
 CloudScript.Commands.DoSomething = args => {
