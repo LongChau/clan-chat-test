@@ -19,7 +19,7 @@ function getRawCode() {
 
     let sourceFolders = [
         'SourcePass1',
-        'SourcePass2',
+        //'SourcePass2',
         'SourcePassFinal'
     ];
 
@@ -53,6 +53,7 @@ function getFiles(fileList, dir) {
 
 function uploadCloudScript(content) {
 
+    // const https = require('https');
     const request = require("request");
 
     let options = {
@@ -71,4 +72,15 @@ function uploadCloudScript(content) {
     request(options, function (error, response, body) {
         console.log(body);
     });
+
+//     const req = https.request(options, res => {
+
+//         console.log('statusCode:', res.statusCode);
+
+//         res.setEncoding('utf8');
+
+//         res.on('data', (d) => {
+//             console.log(  d );
+//         });
+//   });
 }

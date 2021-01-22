@@ -1,5 +1,7 @@
 {
     "version": "0.2.0",
+
+    // When F5 is pressing. Run CodeUploader.
     "configurations": [
         {
             "type": "node",
